@@ -208,7 +208,7 @@ function selectQuiz(quiz) {
 
 const mediaQueryList = window.matchMedia("(min-width: 1024px)");
 
-mediaQueryList.addEventListener("change", (event) => mediaQueryEventHandler());
+/*mediaQueryList.addEventListener("change", (event) => mediaQueryEventHandler());*/
 
 function mediaQueryEventHandler() {
     const width = parseInt(window.getComputedStyle(document.querySelector("body")).getPropertyValue('width'));
