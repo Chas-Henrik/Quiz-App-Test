@@ -34,15 +34,15 @@ loadQuizzes(quizSliderElement, "quiz-slider-item");
 mediaQueryEventHandler();
 
 function loadQuizzes(elementObj, classNames) {
-  let i=0;
-  quizObject.forEach((quiz) => {
+  for (const key in quizObject) {
+    const quiz = quizObject[key];
     const quizElement = document.createElement("p");
-    quizElement.dataset.id = i++;
+    quizElement.dataset.id = parseInt(key);
     quizElement.classList.add(classNames);
     quizElement.addEventListener("click", (e) => selectQuiz(quizElement));
     quizElement.innerHTML = quiz.quizName;
     elementObj.appendChild(quizElement);
-  });
+  }
 }
 
 function selectQuiz(quiz) {
@@ -82,40 +82,33 @@ let itemScrollPositions;
 quizSliderElement.addEventListener("scroll", (e) => scrollEventHandler(e));
 
 function scrollEventHandler(e) {
-  console.log("scroll event");
   const quizSliderItemsElement = Array.from(
     document.getElementsByClassName("quiz-slider-item")
   );
   const quizSliderItemsElementWidth = parseInt(
     window.getComputedStyle(quizSliderItemsElement[0]).getPropertyValue("width")
   );
-    console.log("quizSliderElement.scrollWidth", quizSliderElement.scrollWidth);
-    console.log("quizSliderItemsElementWidth", quizSliderItemsElementWidth);
-    console.log("quizSliderElement.scrollLeft", quizSliderElement.scrollLeft);
-    console.log("quizSliderItemsElementWidth + quizSliderElement.scrollLeft", quizSliderItemsElementWidth + quizSliderElement.scrollLeft);
-
-    itemScrollPositions = calculateItemScrollPositions();
-    console.log("itemScrollPositions", itemScrollPositions);
+  itemScrollPositions = calculateItemScrollPositions();
 
   const scrollPos = quizSliderElement.scrollLeft / quizSliderItemsElementWidth;
   scaleSliderItems(quizSliderItemsElement, scrollPos);
 }
 
 function calculateItemScrollPositions() {
-    const quizSliderItemsElement = Array.from(document.getElementsByClassName("quiz-slider-item"));
-    const quizSliderItemsElementWidth = parseInt(window.getComputedStyle(quizSliderItemsElement[0]).getPropertyValue('width'));
-    const itemScrollPositions = [];
-    console.log("quizSliderElement.scrollWidth", quizSliderElement.scrollWidth);
-    console.log("quizSliderItemsElementWidth", quizSliderItemsElementWidth);
-    console.log("quizSliderElement.scrollLeft", quizSliderElement.scrollLeft);
-    console.log("quizSliderItemsElementWidth + quizSliderElement.scrollLeft", quizSliderItemsElementWidth + quizSliderElement.scrollLeft);
+  const quizSliderItemsElement = Array.from(
+    document.getElementsByClassName("quiz-slider-item")
+  );
+  const quizSliderItemsElementWidth = parseInt(
+    window.getComputedStyle(quizSliderItemsElement[0]).getPropertyValue("width")
+  );
+  const itemScrollPositions = [];
 
-    let scrollPosition = 0;
-    for(let i=0; i<quizSliderItemsElement.length; i++) {
-        itemScrollPositions.push(scrollPosition);
-        scrollPosition += quizSliderItemsElementWidth;
-    }
-    return itemScrollPositions;
+  let scrollPosition = 0;
+  for (let i = 0; i < quizSliderItemsElement.length; i++) {
+    itemScrollPositions.push(scrollPosition);
+    scrollPosition += quizSliderItemsElementWidth;
+  }
+  return itemScrollPositions;
 }
 
 function scaleSliderItems(quizSliderItemsElement, scrollPos) {
@@ -123,7 +116,6 @@ function scaleSliderItems(quizSliderItemsElement, scrollPos) {
     0,
     Math.min(scrollPos, quizSliderItemsElement.length - 1)
   );
-  console.log("scrollPos", scrollPos);
   const indexInFocus = Math.round(scrollPos);
   const indexLeft = Math.floor(scrollPos);
   const indexRight = Math.ceil(scrollPos);
