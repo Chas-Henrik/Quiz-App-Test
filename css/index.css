@@ -1,0 +1,230 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Fonts*/
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "DM Sans", sans-serif;
+
+    --primary-color: #000000;
+    --secondary-color: #5a5858;
+    --primary-background-color: #FFFFFF;
+    --secondary-background-color: #F5F5F5;
+
+    --primary-border-color: #a09d9d;
+    --secondary-border-color: #e0e0e0;
+    --primary-box-shadow-color: 2px 2px 30px 0px #00000033;
+    --secondary-box-shadow-color: 2px 2px 2px 0px #00000033;
+
+    --hover-color: #54C4F8;
+}
+    
+/* Common Classes */
+.collapsed {
+    display: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--primary-font);
+}
+
+
+/* Baker */
+
+
+/* Henrik */
+
+/* Header */
+
+.nav-bar {
+    width: 100vw;
+    max-width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-background-color);
+    border-bottom: 1px solid var(--primary-border-color);
+    z-index: 1;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+}
+
+/* Select list */
+
+.quiz-select {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80rem;
+    max-width: 90vw;
+    min-width: 280px;
+    height: fit-content;
+    max-height: 80svh;
+}
+
+.quiz-list {
+    width : 100%;
+    height: 100%;
+    overflow-x: hidden;
+    border: 2px solid var(--primary-border-color);
+}
+
+.quiz-list-item {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    cursor: default;
+    text-align: center;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.quiz-list-item:nth-of-type(odd) {
+    background-color: var(--secondary-background-color);
+}
+
+.quiz-list-item:hover {
+    background-color: var(--hover-color);
+}
+
+
+/* Footer */
+
+.footer {
+    width: 100vw;
+    max-width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+
+/* Kaj */
+
+
+/* Viktor */
+
+
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 1.5*62.5%;
+    }
+    /* Baker */
+
+    /* Henrik */
+
+    /* Kaj */
+
+    /* Viktor */
+
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 2*62.5%;
+    }
+
+    /* Baker */
+
+    /* Henrik */
+
+    .quiz-slider {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: 20rem;
+        border: 2px solid var(--primary-border-color);
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+
+    .quiz-slider-item {
+        font-size: 1rem;
+        font-weight: 700;
+        text-wrap: nowrap;
+        text-align: center;
+        width: 70%;
+        color: var(--primary-color);
+        background-color: rgba(0, 0, 0, 0);
+        cursor: default;
+        scroll-snap-align: center;
+        scroll-behavior: smooth;
+        flex-shrink: 0;
+        z-index: 0;
+        
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+
+        margin-top: 0rem;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .quiz-slider-item:first-of-type {
+        font-size: 8rem;
+        color: var(--hover-color);
+        cursor: pointer;
+        margin-left: 25%;
+    }
+
+    .quiz-slider-item:last-child {
+        margin-inline-end: 47%;
+    }
+
+    /* Kaj */
+
+    /* Viktor */
+
+}
+
+@media (min-width: 1200px) {
+
+    /* Baker */
+
+    /* Henrik */
+
+    /* Kaj */
+
+    /* Viktor */
+
+}
