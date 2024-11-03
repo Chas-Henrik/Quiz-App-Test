@@ -177,8 +177,8 @@ const quizListElement = document.getElementById("quiz-list-id");
 const quizSliderElement = document.getElementById("quiz-slider-id");
 
 loadQuizzes(quizListElement, "quiz-list-item");
-//loadQuizzes(quizSliderElement, "quiz-slider-item");
-//mediaQueryEventHandler();
+loadQuizzes(quizSliderElement, "quiz-slider-item");
+mediaQueryEventHandler();
 
 /* Load function */
 
@@ -206,9 +206,9 @@ function selectQuiz(quiz) {
 
 /* Media query handler */
 
-// const mediaQueryList = window.matchMedia("(min-width: 1024px)");
+const mediaQueryList = window.matchMedia("(min-width: 1024px)");
 
-/*mediaQueryList.addEventListener("change", (event) => mediaQueryEventHandler());*/
+mediaQueryList.addEventListener("change", (event) => mediaQueryEventHandler());
 
 function mediaQueryEventHandler() {
     const width = parseInt(window.getComputedStyle(document.querySelector("body")).getPropertyValue('width'));
