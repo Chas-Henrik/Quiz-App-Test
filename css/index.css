@@ -79,7 +79,7 @@ html {
     transform: translate(-50%, -50%);
 
     width: 80rem;
-    max-width: 80vw;
+    max-width: 90vw;
     min-width: 280px;
     height: 80svh;
     max-height: 80svh;
@@ -100,9 +100,9 @@ html {
     cursor: default;
     text-align: center;
 
-    -webkit-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .quiz-list-item:nth-of-type(odd) {
@@ -157,7 +157,7 @@ html {
     /* Baker */
 
     /* Henrik */
-/*
+
     .quiz-slider {
         position: absolute;
         top: 50%;
@@ -191,9 +191,9 @@ html {
         flex-shrink: 0;
         z-index: 0;
         
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
 
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -209,7 +209,7 @@ html {
     .quiz-slider-item:last-child {
         margin-inline-end: 47%;
     }
-*/
+
     /* Kaj */
 
     /* Viktor */
