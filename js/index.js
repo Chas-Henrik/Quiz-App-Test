@@ -260,7 +260,7 @@ function calculateItemScrollPositions() {
 }
 
 function scaleSliderItems(quizSliderItemsElement, scrollPos) {
-    scrollPos = Math.min(scrollPos, quizSliderItemsElement.length-1);
+    scrollPos = Math.max(0, Math.min(scrollPos, quizSliderItemsElement.length-1));
     console.log("scrollPos", scrollPos);
     const indexInFocus = Math.round(scrollPos);
     const indexLeft = Math.floor(scrollPos);
