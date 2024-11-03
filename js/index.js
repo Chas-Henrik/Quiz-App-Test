@@ -225,7 +225,7 @@ function mediaQueryEventHandler() {
 /* Scroll event handler */
 let itemScrollPositions;
 
-//quizSliderElement.addEventListener("scroll", (e) => scrollEventHandler(e));
+quizSliderElement.addEventListener("scroll", (e) => scrollEventHandler(e));
 
 function scrollEventHandler(e) {
     console.log("scroll event");
