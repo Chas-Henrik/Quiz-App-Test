@@ -200,11 +200,11 @@ function selectQuiz(quiz) {
     // loadQuiz();
 }
 
-/* Media breakpoint handler */
+/* Media query handler */
 
-const mql = window.matchMedia("(min-width: 1024px)");
+const mediaQueryList = window.matchMedia("(min-width: 1024px)");
 
-mql.addEventListener("change", (event) => {
+mediaQueryList.addEventListener("change", (event) => {
     const width = parseInt(window.getComputedStyle(document.querySelector("body")).getPropertyValue('width'));
 
     if(width >= 1024) {
