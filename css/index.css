@@ -156,7 +156,7 @@ html {
     /* Baker */
 
     /* Henrik */
-
+/*
     .quiz-slider {
         position: absolute;
         top: 50%;
@@ -190,9 +190,9 @@ html {
         flex-shrink: 0;
         z-index: 0;
         
-        -webkit-user-select: none; /* Safari */
-        -ms-user-select: none; /* IE 10 and IE 11 */
-        user-select: none; /* Standard syntax */
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -208,7 +208,7 @@ html {
     .quiz-slider-item:last-child {
         margin-inline-end: 47%;
     }
-
+*/
     /* Kaj */
 
     /* Viktor */

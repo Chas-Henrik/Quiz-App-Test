@@ -177,16 +177,15 @@ const quizListElement = document.getElementById("quiz-list");
 const quizSliderElement = document.getElementById("quiz-slider");
 
 loadQuizzes(quizListElement, "quiz-list-item");
-loadQuizzes(quizSliderElement, "quiz-slider-item");
-mediaQueryEventHandler();
+//loadQuizzes(quizSliderElement, "quiz-slider-item");
+//mediaQueryEventHandler();
 
 /* Load function */
 
 function loadQuizzes(elementObj, classNames) {
-    elementObj.classList.add("collapsed");
+//    elementObj.classList.add("collapsed");
     for(let i=0; i<quizObject.quizArray.length; i++) {
         const quiz = quizObject.quizArray[i];
-        const quizName = quiz.quizName;
         const quizElement = document.createElement("p");
         quizElement.dataset.id = i;
         quizElement.classList.add(classNames);
