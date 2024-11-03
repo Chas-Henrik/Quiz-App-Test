@@ -1,8 +1,8 @@
-//debugger;
+debugger;
 
 const quizSelectElement = document.getElementById("quiz-select-id");
-const quizRunElement = document.getElementById("quiz-run-id");
-const quizResultElement = document.getElementById("quiz-result-id");
+const quizRunElement = document.getElementById("quiz-run");
+const quizResultElement = document.getElementById("quiz-result");
 
 //let quizObject = await readJsonFile("./json/quiz.json");
 
@@ -181,7 +181,6 @@ loadQuizzes(quizSliderElement, "quiz-slider-item");
 mediaQueryEventHandler();
 
 function loadQuizzes(elementObj, classNames) {
-    elementObj.classList.add("collapsed");
     for(let i=0; i<quizObject.quizArray.length; i++) {
         const quiz = quizObject.quizArray[i];
         const quizElement = document.createElement("p");
