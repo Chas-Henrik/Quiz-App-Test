@@ -206,7 +206,7 @@ function selectQuiz(quiz) {
 
 /* Media query handler */
 
-const mediaQueryList = window.matchMedia("(min-width: 1024px)");
+// const mediaQueryList = window.matchMedia("(min-width: 1024px)");
 
 /*mediaQueryList.addEventListener("change", (event) => mediaQueryEventHandler());*/
 
@@ -225,7 +225,7 @@ function mediaQueryEventHandler() {
 /* Scroll event handler */
 let itemScrollPositions;
 
-quizSliderElement.addEventListener("scroll", (e) => scrollEventHandler(e));
+//quizSliderElement.addEventListener("scroll", (e) => scrollEventHandler(e));
 
 function scrollEventHandler(e) {
     console.log("scroll event");
