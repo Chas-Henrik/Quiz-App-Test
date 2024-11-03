@@ -37,6 +37,126 @@ let quizObject = {
                     correctIndexAnswer : 0
                 }
             ]
+        },
+        {
+            quizName : "Frukt Quiz",
+            questionsArray : [
+                {
+                    question : "Vilken av följande är ett programmeringsspråk?",
+                    answers : ["Hamburger", "Coffee", "Whiskey", "Java"],
+                    correctIndexAnswer : 3
+                },
+                {
+                    question : "Vad står MB för?",
+                    answers : ["Mera Byte", "Många Byte", "Mega Byte", "Multi Byte"],
+                    correctIndexAnswer : 0
+                }
+            ]
+        },
+        {
+            quizName : "Elektronik Quiz",
+            questionsArray : [
+                {
+                    question : "Vilken av följande är ett programmeringsspråk?",
+                    answers : ["Hamburger", "Coffee", "Whiskey", "Java"],
+                    correctIndexAnswer : 3
+                },
+                {
+                    question : "Vad står MB för?",
+                    answers : ["Mera Byte", "Många Byte", "Mega Byte", "Multi Byte"],
+                    correctIndexAnswer : 0
+                }
+            ]
+        },
+        {
+            quizName : "Geografi Quiz",
+            questionsArray : [
+                {
+                    question : "Vilken av följande är ett programmeringsspråk?",
+                    answers : ["Hamburger", "Coffee", "Whiskey", "Java"],
+                    correctIndexAnswer : 3
+                },
+                {
+                    question : "Vad står MB för?",
+                    answers : ["Mera Byte", "Många Byte", "Mega Byte", "Multi Byte"],
+                    correctIndexAnswer : 0
+                }
+            ]
+        },
+        {
+            quizName : "Spel Quiz",
+            questionsArray : [
+                {
+                    question : "Vilken av följande är ett programmeringsspråk?",
+                    answers : ["Hamburger", "Coffee", "Whiskey", "Java"],
+                    correctIndexAnswer : 3
+                },
+                {
+                    question : "Vad står MB för?",
+                    answers : ["Mera Byte", "Många Byte", "Mega Byte", "Multi Byte"],
+                    correctIndexAnswer : 0
+                }
+            ]
+        },
+        {
+            quizName : "Möbel Quiz",
+            questionsArray : [
+                {
+                    question : "Vilken av följande är ett programmeringsspråk?",
+                    answers : ["Hamburger", "Coffee", "Whiskey", "Java"],
+                    correctIndexAnswer : 3
+                },
+                {
+                    question : "Vad står MB för?",
+                    answers : ["Mera Byte", "Många Byte", "Mega Byte", "Multi Byte"],
+                    correctIndexAnswer : 0
+                }
+            ]
+        },
+        {
+            quizName : "Litteratur Quiz",
+            questionsArray : [
+                {
+                    question : "Vilken av följande är ett programmeringsspråk?",
+                    answers : ["Hamburger", "Coffee", "Whiskey", "Java"],
+                    correctIndexAnswer : 3
+                },
+                {
+                    question : "Vad står MB för?",
+                    answers : ["Mera Byte", "Många Byte", "Mega Byte", "Multi Byte"],
+                    correctIndexAnswer : 0
+                }
+            ]
+        },
+        {
+            quizName : "Historie Quiz",
+            questionsArray : [
+                {
+                    question : "Vilken av följande är ett programmeringsspråk?",
+                    answers : ["Hamburger", "Coffee", "Whiskey", "Java"],
+                    correctIndexAnswer : 3
+                },
+                {
+                    question : "Vad står MB för?",
+                    answers : ["Mera Byte", "Många Byte", "Mega Byte", "Multi Byte"],
+                    correctIndexAnswer : 0
+                }
+            ]
+        },
+        {
+            quizName : "Kemi Quiz",
+            questionsArray : [
+                {
+                    question : "Vilken av följande är ett programmeringsspråk?",
+                    answers : ["Hamburger", "Coffee", "Whiskey", "Java"],
+                    correctIndexAnswer : 3
+                },
+                {
+                    question : "Vad står MB för?",
+                    answers : ["Mera Byte", "Många Byte", "Mega Byte", "Multi Byte"],
+                    correctIndexAnswer : 0
+                }
+            ]
         }
     ]
 };
