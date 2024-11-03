@@ -1,10 +1,8 @@
 //debugger;
 
-const quizSelectElement = document.getElementById("quiz-select-id");
-const quizRunElement = document.getElementById("quiz-run-id");
-const quizResultElement = document.getElementById("quiz-result-id");
-
-
+const quizSelectElement = document.getElementById("quiz-select");
+const quizRunElement = document.getElementById("quiz-run");
+const quizResultElement = document.getElementById("quiz-result");
 
 //let quizObject = await readJsonFile("./json/quiz.json");
 
@@ -173,14 +171,14 @@ let currentAnswers = [];
 
 /* Henrik */
 
-const quizListElement = document.getElementById("quiz-list-id");
-const quizSliderElement = document.getElementById("quiz-slider-id");
+const quizListElement = document.getElementById("quiz-list");
+const quizSliderElement = document.getElementById("quiz-slider");
+
+/* Load function */
 
 loadQuizzes(quizListElement, "quiz-list-item");
 loadQuizzes(quizSliderElement, "quiz-slider-item");
 mediaQueryEventHandler();
-
-/* Load function */
 
 function loadQuizzes(elementObj, classNames) {
     elementObj.classList.add("collapsed");
