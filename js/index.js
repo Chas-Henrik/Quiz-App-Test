@@ -1,8 +1,8 @@
 //debugger;
 
-const quizSelectElement = document.getElementById("quiz-select");
-const quizRunElement = document.getElementById("quiz-run");
-const quizResultElement = document.getElementById("quiz-result");
+const quizSelectElement = document.getElementById("quiz-select-id");
+const quizRunElement = document.getElementById("quiz-run-id");
+const quizResultElement = document.getElementById("quiz-result-id");
 
 
 
@@ -173,8 +173,8 @@ let currentAnswers = [];
 
 /* Henrik */
 
-const quizListElement = document.getElementById("quiz-list");
-const quizSliderElement = document.getElementById("quiz-slider");
+const quizListElement = document.getElementById("quiz-list-id");
+const quizSliderElement = document.getElementById("quiz-slider-id");
 
 loadQuizzes(quizListElement, "quiz-list-item");
 //loadQuizzes(quizSliderElement, "quiz-slider-item");
