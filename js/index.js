@@ -193,7 +193,7 @@ function loadQuizzes(elementObj, classNames) {
 
 function selectQuiz(quiz) {
     currentQuiz = quizObject.quizArray[quiz.dataset.id];
-    quizListElement.classList.add("collapsed");
+    quizSelectElement.classList.add("collapsed");
     quizRunElement.classList.remove("collapsed");
     
     console.log(`Quiz ${quiz.dataset.id} selected`);
