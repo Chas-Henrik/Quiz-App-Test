@@ -34,7 +34,7 @@ loadQuizzes(quizSliderElement, "quiz-slider-item");
 mediaQueryEventHandler();
 
 function loadQuizzes(elementObj, classNames) {
-  for (const key in quizObject) {
+  for (let key in quizObject) {
     const quiz = quizObject[key];
     const quizElement = document.createElement("p");
     quizElement.dataset.id = parseInt(key);
