@@ -183,7 +183,7 @@ mediaQueryEventHandler();
 /* Load function */
 
 function loadQuizzes(elementObj, classNames) {
-//    elementObj.classList.add("collapsed");
+    elementObj.classList.add("collapsed");
     for(let i=0; i<quizObject.quizArray.length; i++) {
         const quiz = quizObject.quizArray[i];
         const quizElement = document.createElement("p");
