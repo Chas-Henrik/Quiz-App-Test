@@ -81,7 +81,7 @@ html {
     width: 80rem;
     max-width: 90vw;
     min-width: 280px;
-    height: fit-content;
+    height: 80svh;
     max-height: 80svh;
 }
 
@@ -99,9 +99,9 @@ html {
     cursor: default;
     text-align: center;
 
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
 
 .quiz-list-item:nth-of-type(odd) {
