@@ -173,6 +173,8 @@ let currentAnswers = [];
 
 const quizListElement = document.getElementById("quiz-list-id");
 const quizSliderElement = document.getElementById("quiz-slider-id");
+quizListElement.classList.add("collapsed");
+quizSliderElement.classList.add("collapsed");
 
 /* Load function */
 
