@@ -4,6 +4,12 @@ const quizSelectElement = document.getElementById("quiz-select");
 const quizRunElement = document.getElementById("quiz-run");
 const quizResultElement = document.getElementById("quiz-result");
 
+document.addEventListener("DOMContentLoaded", () => {
+    loadQuizzes(quizListElement, "quiz-list-item");
+    loadQuizzes(quizSliderElement, "quiz-slider-item");
+    mediaQueryEventHandler();
+});
+
 //let quizObject = await readJsonFile("./json/quiz.json");
 
 let quizObject = {
@@ -175,10 +181,6 @@ const quizListElement = document.getElementById("quiz-list");
 const quizSliderElement = document.getElementById("quiz-slider");
 
 /* Load function */
-
-loadQuizzes(quizListElement, "quiz-list-item");
-loadQuizzes(quizSliderElement, "quiz-slider-item");
-mediaQueryEventHandler();
 
 function loadQuizzes(elementObj, classNames) {
     for(let i=0; i<quizObject.quizArray.length; i++) {
