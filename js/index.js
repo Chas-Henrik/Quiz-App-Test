@@ -176,7 +176,7 @@ let currentAnswers = [];
 const quizListElement = document.getElementById("quiz-list-id");
 const quizSliderElement = document.getElementById("quiz-slider-id");
 
-loadQuizzes(quizListElement, "quiz-list-item");
+//loadQuizzes(quizListElement, "quiz-list-item");
 //loadQuizzes(quizSliderElement, "quiz-slider-item");
 //mediaQueryEventHandler();
 
