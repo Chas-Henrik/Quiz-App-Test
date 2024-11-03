@@ -170,6 +170,7 @@ let currentAnswers = [];
 
 
 /* Henrik */
+
 const quizListElement = document.getElementById("quiz-list");
 const quizSliderElement = document.getElementById("quiz-slider");
 
@@ -177,6 +178,7 @@ const quizSliderElement = document.getElementById("quiz-slider");
 
 loadQuizzes(quizListElement, "quiz-list-item");
 loadQuizzes(quizSliderElement, "quiz-slider-item");
+mediaQueryEventHandler();
 
 function loadQuizzes(elementObj, classNames) {
     for(let i=0; i<quizObject.quizArray.length; i++) {
@@ -204,7 +206,9 @@ function selectQuiz(quiz) {
 
 const mediaQueryList = window.matchMedia("(min-width: 1024px)");
 
-mediaQueryList.addEventListener("change", (event) => {
+mediaQueryList.addEventListener("change", (event) => mediaQueryEventHandler());
+
+function mediaQueryEventHandler() {
     const width = parseInt(window.getComputedStyle(document.querySelector("body")).getPropertyValue('width'));
 
     if(width >= 1024) {
@@ -214,7 +218,7 @@ mediaQueryList.addEventListener("change", (event) => {
         quizListElement.classList.remove("collapsed");
         quizSliderElement.classList.add("collapsed");
     }
-});
+}
 
 /* Scroll event handler */
 let itemScrollPositions;
@@ -235,7 +239,6 @@ function scrollEventHandler(e) {
 
     const scrollPos = quizSliderElement.scrollLeft / quizSliderItemsElementWidth;
     scaleSliderItems(quizSliderItemsElement, scrollPos);
-
 }
 
 function calculateItemScrollPositions() {

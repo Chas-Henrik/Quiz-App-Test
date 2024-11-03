@@ -194,8 +194,6 @@ html {
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none; /* Standard syntax */
 
-        margin-top: 0rem;
-        will-change: transform;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
     }
