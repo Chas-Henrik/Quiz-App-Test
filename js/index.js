@@ -22,9 +22,9 @@ let currentAnswers = [];
 
 /* Henrik */
 
-const hamburgerMenuElement = document.getElementById("hamburger-menu-id");
-
 /* Hamburger Menu */
+
+const hamburgerMenuElement = document.getElementById("hamburger-menu-id");
 
 hamburgerMenuElement.addEventListener("click", (e) => hamburgerMenuEventHandler(e));
 
