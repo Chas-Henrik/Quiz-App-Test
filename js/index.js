@@ -138,8 +138,8 @@ function scaleSliderItems(quizSliderItemsElement, scrollPos) {
   const indexRight = Math.ceil(scrollPos);
   const indexLeftDiff = scrollPos - indexLeft;
   const indexRightDiff = indexRight - scrollPos;
-  const leftFontSize = 1 + 8 * (1 - indexLeftDiff);
-  const rightFontSize = 1 + 8 * (1 - indexRightDiff);
+  const leftFontSize = 1 + 5 * (1 - indexLeftDiff);
+  const rightFontSize = 1 + 5 * (1 - indexRightDiff);
 
   for (let i = 0; i <= quizSliderItemsElement.length - 1; i++) {
     quizSliderItemsElement[i].style.fontSize = `1rem`;
