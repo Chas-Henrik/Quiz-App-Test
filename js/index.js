@@ -1,3 +1,5 @@
+debugger;
+
 let quizObject = {};
 
 if (localStorage.getItem("quizObject")) {
@@ -57,7 +59,7 @@ function loadQuizzes(elementObj, classNames) {
     quizElement.dataset.id = parseInt(key);
     quizElement.classList.add(classNames);
     quizElement.addEventListener("click", (e) => selectQuiz(quizElement));
-    quizElement.innerHTML = quiz.quizName;
+    quizElement.innerText = quiz.quizName;
     elementObj.appendChild(quizElement);
   }
 }
@@ -151,9 +153,28 @@ function scaleSliderItems(quizSliderItemsElement, scrollPos) {
   quizSliderItemsElement[indexLeft].style.fontSize = `${leftFontSize}rem`;
   quizSliderItemsElement[indexRight].style.fontSize = `${rightFontSize}rem`;
 
+  console.log("overflow", calculateOverflow(quizSliderItemsElement[indexInFocus]));
   quizSliderItemsElement[indexInFocus].style.cursor = "pointer";
   quizSliderItemsElement[indexInFocus].style.color = "#54C4F8";
   quizSliderItemsElement[indexInFocus].style.zIndex = "1";
+}
+
+function calculateOverflow(element) {
+  const clientWidth = element.clientWidth;
+  const measuredWidth = measureText(element);
+  const overflow = measuredWidth - clientWidth;
+  // console.log("clientWidth", clientWidth);
+  // console.log("measuredWidth", measuredWidth);
+
+  return (overflow > 0) ? overflow : 0;
+}
+
+function measureText(element) {
+  let canvasElement = document.createElement("canvas");
+  let canvasContext = canvasElement.getContext("2d");
+
+  canvasContext.font = window.getComputedStyle(element).getPropertyValue("font");
+  return canvasContext.measureText(element.innerText).width;
 }
 
 /* Kaj */
