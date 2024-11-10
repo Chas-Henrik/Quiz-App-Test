@@ -42,7 +42,7 @@ aboutMenuElement.addEventListener("click", (e) => {
 });
 
 /* Load function */
-
+let selectQuizActive = true;
 const quizListElement = document.getElementById("quiz-list-id");
 const quizSliderElement = document.getElementById("quiz-slider-id");
 quizListElement.classList.add("collapsed");
@@ -70,6 +70,7 @@ function selectQuiz(quiz) {
   quizRunElement.classList.remove("collapsed");
 
   console.log(`Quiz ${quiz.dataset.id} selected`);
+  selectQuizActive = false;
   // loadQuiz(currentQuiz);
 }
 
@@ -86,12 +87,14 @@ function mediaQueryEventHandler() {
       .getPropertyValue("width")
   );
 
-  if (width >= 1024) {
-    quizListElement.classList.add("collapsed");
-    quizSliderElement.classList.remove("collapsed");
-  } else {
-    quizListElement.classList.remove("collapsed");
-    quizSliderElement.classList.add("collapsed");
+  if(selectQuizActive) {
+    if (width >= 1024) {
+      quizListElement.classList.add("collapsed");
+      quizSliderElement.classList.remove("collapsed");
+    } else {
+      quizListElement.classList.remove("collapsed");
+      quizSliderElement.classList.add("collapsed");
+    }
   }
 }
 

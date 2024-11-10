@@ -81,7 +81,7 @@ html {
 
 .nav-menu li a {
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--primary-color);
     cursor: pointer;
@@ -233,7 +233,7 @@ html {
         font-weight: 700;
         text-wrap: nowrap;
         text-align: center;
-        width: 70%;
+        width: 50%;
         color: var(--primary-color);
         background-color: rgba(0, 0, 0, 0);
         cursor: default;
